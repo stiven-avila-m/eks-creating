@@ -17,7 +17,7 @@ data "aws_availability_zones" "available" {}
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "~> 5.0"
+  version = "6.0.1"
 
   name = "${var.cluster_name}-vpc"
   cidr = "10.0.0.0/16"
@@ -40,7 +40,7 @@ data "aws_caller_identity" "current" {}
 
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "~> 19.0"
+  version = "21.0.8"
 
   cluster_name                   = var.cluster_name
   cluster_version                = var.kubernetes_version
