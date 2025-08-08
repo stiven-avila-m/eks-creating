@@ -1,10 +1,10 @@
 terraform {
-  required_version = ">= 1.5.0"
+  required_version = ">= 1.3"
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "6.8.0"
+      version = ">= 5.34"
     }
   }
 }
@@ -40,9 +40,9 @@ data "aws_caller_identity" "current" {}
 
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "~> 21.0"
-
+  version = "20.1.0"
   cluster_name                   = var.cluster_name
+  
   cluster_version                = var.kubernetes_version
   cluster_endpoint_public_access = true
 
