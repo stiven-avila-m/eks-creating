@@ -1,10 +1,3 @@
-/*
- * Outputs expose useful information about the created EKS cluster.  A
- * kubeconfig file can be used by `kubectl` or other clients to
- * connect to the cluster.  Exposing the Fargate profile ARN
- * allows referencing it from other modules if necessary.
- */
-
 output "cluster_id" {
   description = "EKS cluster ID"
   value       = module.eks.cluster_id

@@ -1,10 +1,3 @@
-/*
- * Input variables for the EKS cluster configuration.  These values
- * can be overridden from the command line or via a Terraform
- * `.tfvars` file.  Providing sensible defaults makes the
- * configuration easier to consume.
- */
-
 variable "cluster_name" {
   description = "Name of the EKS cluster and associated resources"
   type        = string
