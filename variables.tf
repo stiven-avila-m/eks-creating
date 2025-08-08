@@ -13,7 +13,7 @@ variable "region" {
 variable "kubernetes_version" {
   description = "Kubernetes version to use for the EKS control plane"
   type        = string
-  default     = "1.32"
+  default     = "1.29"
 }
 
 variable "environment" {

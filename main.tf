@@ -83,4 +83,5 @@ module "eks" {
     Terraform   = "true"
     Cluster     = var.cluster_name
   }
+  
 }
